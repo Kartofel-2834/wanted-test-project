@@ -4,6 +4,8 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/image"],
 
+  components: ["~/components", "~/components/common"],
+
   runtimeConfig: {
     public: {
       baseURL:
