@@ -8,7 +8,7 @@
     </page-button>
 
     <div class="header__product">
-      <nuxt-img src="/car_edit_3.png" class="header__product__car" />
+      <nuxt-img src="/car.png" class="header__product__car" />
       <nuxt-img src="/logo.svg" class="header__product__mark" />
     </div>
   </page-section>
