@@ -16,8 +16,6 @@
 </template>
 
 <script setup>
-import { defineProps, useSlots } from "vue";
-
 const slots = useSlots();
 
 const props = defineProps({
