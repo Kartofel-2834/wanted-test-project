@@ -1,0 +1,75 @@
+/* Simple button */
+
+.button {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 20em;
+  max-width: 100%;
+  background-color: transparent;
+  font-size: 1.25em;
+  font-weight: 600;
+  border: 2px solid var(--primary);
+  color: var(--text);
+  fill: var(--text);
+  padding: 0.5em 3em;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button:disabled {
+  opacity: 0.8;
+}
+
+.button:hover:not(:disabled),
+.button:active:not(:disabled) {
+  background-color: var(--primary);
+  color: var(--theme);
+  fill: var(--theme);
+}
+
+.button:active:not(:disabled) {
+  opacity: 0.9;
+}
+
+.button.button_empty .button__content {
+  display: none;
+}
+
+.button.button_empty.button_icon {
+  padding: 0.5em;
+}
+
+.button:not(.button_icon) .button__content {
+  width: 100%;
+}
+
+/* Icon button */
+
+.button.button_icon {
+  justify-content: space-between;
+  padding: 0.5em 0.75em 0.5em 1em;
+}
+
+.button.button_icon .button__icon {
+  display: block;
+  font-size: 1.35em;
+}
+
+/* Filled button */
+
+.button.button_filled {
+  background-color: var(--theme);
+  border-color: var(--theme);
+}
+
+.button.button_filled {
+  background-color: var(--theme);
+  border-color: var(--theme);
+}
+
+.button.button_filled:hover:not(:disabled),
+.button.button_filled:active:not(:disabled) {
+  border-color: var(--primary);
+}

@@ -1,0 +1,48 @@
+.features {
+  padding-top: 5em;
+}
+
+.features__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin-top: 3em;
+}
+
+.features__list__card {
+  width: 30%;
+  overflow: hidden;
+}
+
+.features__list__card__preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.features__list__card__preview img {
+  width: 100%;
+}
+
+.features__list__card__description {
+  margin-top: 1.75em;
+}
+
+.features__button {
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+@media (max-width: 1200px) {
+  .features__list__card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .features__list__card {
+    width: 90%;
+  }
+}
