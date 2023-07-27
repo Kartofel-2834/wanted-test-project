@@ -4,7 +4,7 @@
 
     <div class="features__list">
       <div
-        v-for="(feature, index) of features"
+        v-for="(feature, index) of features.data"
         :key="index"
         class="features__list__card"
       >
@@ -29,17 +29,17 @@
 </template>
 
 <script setup>
+import useFeaturesStore from "~/stores/features";
+
 const isFeatureAddLocked = ref(false);
+const features = useFeaturesStore();
 
-const features = ref([]);
-const { data } = await getFeatures();
-
-features.value = data.value;
+features.fetch();
 
 function addFeature() {
   isFeatureAddLocked.value = true;
 
-  features.value.splice(1, 0, {
+  features.add({
     image: "/additionalFeature.png",
     image_alt: "нестационарный гироскопический стабилизатор",
     description:
